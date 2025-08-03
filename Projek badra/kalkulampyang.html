@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Pembulatan</title>
+  <style>
+    body {
+      background: #e0f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .calculator {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+    .calculator h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00796b;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00796b;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .form-group button:hover {
+      background-color: #004d40;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e0f2f1;
+      border-left: 5px solid #00796b;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Kalkulator Pembulatan</h1>
+    <div class="form-group">
+      <label for="number">Masukkan Angka:</label>
+      <input type="number" id="number" step="any">
+    </div>
+    <div class="form-group">
+      <label for="method">Metode Pembulatan:</label>
+      <select id="method">
+        <option value="satuan">Satuan Terdekat</option>
+        <option value="desimal">Tempat Desimal</option>
+        <option value="penting">Angka Penting</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="parameter">Parameter (misal: 2):</label>
+      <input type="number" id="parameter" min="0">
+    </div>
+    <div class="form-group">
+      <button onclick="hitungPembulatan()">Hitung</button>
+    </div>
+    <div id="hasil" class="result"></div>
+  </div>
+
+  <script>
+    function hitungPembulatan() {
+      const angka = parseFloat(document.getElementById("number").value);
+      const metode = document.getElementById("method").value;
+      const parameter = parseInt(document.getElementById("parameter").value);
+      let hasil = "";
+
+      if (isNaN(angka) || (metode !== "satuan" && isNaN(parameter))) {
+        hasil = "Masukkan angka dan parameter yang valid.";
+      } else {
+        switch (metode) {
+          case "satuan":
+            hasil = Math.round(angka);
+            break;
+          case "desimal":
+            hasil = angka.toFixed(parameter);
+            break;
+          case "penting":
+            hasil = Number(angka.toPrecision(parameter));
+            break;
+          default:
+            hasil = "Metode tidak dikenali.";
+        }
+      }
+      document.getElementById("hasil").innerText = `Hasil: ${hasil}`;
+    }
+  </script>
+</body>
+</html>

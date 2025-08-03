@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kesalahan Pengukuran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e3f0fd, #f1f8e9);
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.5em;
+    }
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 900px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .contoh {
+      background-color: #f1f8e9;
+      border-left: 6px solid #aed581;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .calculator {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .calculator h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00796b;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #00796b;
+      box-shadow: 0 0 5px rgba(0,121,107,0.2);
+    }
+    .form-group button {
+      width: 100%;
+      padding: 14px;
+      background-color: #00796b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-group button:hover {
+      background-color: #004d40;
+    }
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      font-size: 17px;
+      background-color: #e0f2f1;
+      border-left: 6px solid #00796b;
+      border-radius: 6px;
+    }
+    .back-button {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .back-button a {
+      text-decoration: none;
+      padding: 12px 24px;
+      background-color: #00796b;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .back-button a:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kesalahan Pengukuran</h1>
+  </header>
+
+  <section>
+    <h2>Pengertian</h2>
+    <p>Dalam pengukuran, selalu ada kemungkinan terjadi kesalahan. Kesalahan ini muncul karena keterbatasan alat ukur, keterampilan pengamat, atau kondisi lingkungan. Pemahaman tentang kesalahan sangat penting agar hasil pengukuran bisa diinterpretasikan dengan tepat.</p>
+    <ul>
+      <li>Kesalahan Mutlak</li>
+      <li>Kesalahan Relatif</li>
+      <li>Persentase Kesalahan</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>1. Kesalahan Mutlak</h2>
+    <p>Kesalahan mutlak adalah selisih antara nilai yang diukur dengan nilai sebenarnya.</p>
+    <div class="contoh">
+      <p>Rumus:</p>
+      <p>Kesalahan Mutlak = Hasil Pengukuran - Nilai Sebenarnya</p>
+      <p>atau</p>
+      <p>Kesalahan Mutlak = 1/2 x Satuan Ukuran Terkecil (jika nilai sebenarnya tidak diketahui)</p>
+    </div>
+    <div class="contoh">
+    <p>Contoh:</p>
+      <p>A.Jika panjang benda diukur 10,2 cm, tetapi nilai sebenarnya adalah 10,0 cm, maka:</p>
+      <p>Kesalahan Mutlak = 10,2 - 10 = 0,2</p>
+      <p>B.Sebuah tim teknisi mengukur tegangan listrik dalam sirkuit dan mencatat nilainya 229 Volt. Nilai standar seharusnya 230 Volt.</p>
+      <p>Kesalahan Mutlak = 229 volt - 230 volt = 1 volt</p>  </div>
+    </section>
+
+  <section>
+    <h2>2. Kesalahan Relatif</h2>
+    <p>Kesalahan relatif adalah perbandingan antara kesalahan mutlak dengan nilai sebenarnya.</p>
+    <div class="contoh">
+      <p>Rumus:</p>
+      <p>Kesalahan Relatif = Kesalahan Mutlak ÷ Nilai Sebenarnya</p>
+    </div>
+    <div class="contoh">
+      <p>Contoh:</p>
+      <p>A.Dengan kesalahan mutlak 0,2 cm dan nilai sebenarnya 10,0 cm:</p>
+      <p>Kesalahan Relatif = 0,2 ÷ 10,0 = 0,2</p>
+      <p>B.Dalam percobaan suhu, termometer menunjukkan suhu air mendidih sebesar 98°C, padahal suhu sebenarnya adalah 100°C.</p>
+      <p>Kesalahan Mutlak = 98°C - 100°C  = 2°C</p>
+      <p>Kesalahan Relatif = 2 ÷ 100 =0,02 </p>
+   
+    </div>  </section>
+
+  <section>
+    <h2>3. Persentase Kesalahan</h2>
+    <p>Persentase kesalahan adalah kesalahan relatif yang dinyatakan dalam persen.</p>
+    <div class="contoh">
+      <p>Rumus:</p>
+      <p>Persentase Kesalahan = (Kesalahan Mutlak ÷ Nilai Sebenarnya) × 100%</p>
+    </div>
+     <div class="contoh">
+      <p>Contoh:</p>
+      <p>A.Persentase Kesalahan = ( 0,2 ÷ 10,0 ) x 100% = 2%</p>
+      <p>B.Kesalahan Mutlak = 2,1kg - 2,0kg = 0,1kg</p>
+      <p>Persentase Kesalahan = (0,1 ÷ 2,0) x 100% = 5%</p>
+   
+    </div>
+  </section>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #f1f8e9);
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 900px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .calculator {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 14px;
+      background-color: #00796b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #004d40;
+    }
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      font-size: 17px;
+      background-color: #e0f2f1;
+      border-left: 6px solid #00796b;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+ 
+
+  <section>
+    <h2>Kalkulator Kesalahan</h2>
+    <div class="calculator">
+      <div class="form-group">
+        <label for="jenis">Pilih jenis kesalahan:</label>
+        <select id="jenis" onchange="tampilkanInput()">
+          <option value="">-- Pilih --</option>
+          <option value="mutlak">Kesalahan Mutlak</option>
+          <option value="relatif">Kesalahan Relatif</option>
+          <option value="persentase">Persentase Kesalahan</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="nilaiSebenarnyaGroup" style="display:none;">
+        <label for="nilaiSebenarnya">Nilai Sebenarnya:</label>
+        <input type="number" id="nilaiSebenarnya" step="any">
+      </div>
+
+      <div class="form-group" id="hasilUkurGroup" style="display:none;">
+        <label for="hasilUkur">Hasil Pengukuran:</label>
+        <input type="number" id="hasilUkur" step="any">
+      </div>
+
+      <div class="form-group" id="kesalahanMutlakGroup" style="display:none;">
+        <label for="kesalahanMutlak">Kesalahan Mutlak:</label>
+        <input type="number" id="kesalahanMutlak" step="any">
+      </div>
+
+      <div class="form-group">
+        <button onclick="hitung()">Hitung</button>
+      </div>
+
+      <div class="result" id="output" style="display:none;"></div>
+    </div>
+  </section>
+
+  <script>
+    function tampilkanInput() {
+      const jenis = document.getElementById("jenis").value;
+      document.getElementById("output").style.display = "none";
+
+      // Reset
+      document.getElementById("nilaiSebenarnyaGroup").style.display = "none";
+      document.getElementById("hasilUkurGroup").style.display = "none";
+      document.getElementById("kesalahanMutlakGroup").style.display = "none";
+
+      if (jenis === "mutlak") {
+        document.getElementById("nilaiSebenarnyaGroup").style.display = "block";
+        document.getElementById("hasilUkurGroup").style.display = "block";
+      } else if (jenis === "relatif") {
+        document.getElementById("nilaiSebenarnyaGroup").style.display = "block";
+        document.getElementById("hasilUkurGroup").style.display = "block";
+      } else if (jenis === "persentase") {
+        document.getElementById("nilaiSebenarnyaGroup").style.display = "block";
+        document.getElementById("hasilUkurGroup").style.display = "block";
+      }
+    }
+
+    function hitung() {
+      const jenis = document.getElementById("jenis").value;
+      const nilaiSebenarnya = parseFloat(document.getElementById("nilaiSebenarnya").value);
+      const hasilUkur = parseFloat(document.getElementById("hasilUkur").value);
+      const output = document.getElementById("output");
+
+      let hasil = "";
+
+      if (jenis === "mutlak") {
+        hasil = Math.abs(hasilUkur - nilaiSebenarnya);
+        output.innerHTML = `Kesalahan Mutlak = |${hasilUkur} - ${nilaiSebenarnya}| = <strong>${hasil}</strong>`;
+      } else if (jenis === "relatif") {
+        const mutlak = Math.abs(hasilUkur - nilaiSebenarnya);
+        hasil = mutlak / nilaiSebenarnya;
+        output.innerHTML = `Kesalahan Relatif = ${mutlak} ÷ ${nilaiSebenarnya} = <strong>${hasil.toFixed(4)}</strong>`;
+      } else if (jenis === "persentase") {
+        const mutlak = Math.abs(hasilUkur - nilaiSebenarnya);
+        hasil = (mutlak / nilaiSebenarnya) * 100;
+        output.innerHTML = `Persentase Kesalahan = (${mutlak} ÷ ${nilaiSebenarnya}) × 100% = <strong>${hasil.toFixed(2)}%</strong>`;
+      } else {
+        output.innerHTML = "Silakan pilih jenis kesalahan.";
+      }
+
+      output.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
+
+ 
+  <div class="back-button">
+    <a href="aproksimasi.html">← Kembali ke Menu Utama</a>
+  </div>
+
+  
+
+</body>
+</html>

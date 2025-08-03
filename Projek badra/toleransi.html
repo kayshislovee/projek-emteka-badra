@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aproksimasi Kesalahan & Kalkulator Pembulatan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #f1f8e9);
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.5em;
+    }
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 900px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .contoh {
+      background-color: #f1f8e9;
+      border-left: 6px solid #aed581;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .calculator {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .calculator h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00796b;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #00796b;
+      box-shadow: 0 0 5px rgba(0,121,107,0.2);
+    }
+    .form-group button {
+      width: 100%;
+      padding: 14px;
+      background-color: #00796b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-group button:hover {
+      background-color: #004d40;
+    }
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      font-size: 17px;
+      background-color: #e0f2f1;
+      border-left: 6px solid #00796b;
+      border-radius: 6px;
+    }
+    .back-button {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .back-button a {
+      text-decoration: none;
+      padding: 12px 24px;
+      background-color: #00796b;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .back-button a:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Toleransi Kesalahan</h1>
+    
+  </header>
+
+  <section>
+    <h2>Pengertian</h2>
+    <p>Toleransi kesalahan adalah batas maksimum penyimpangan yang masih dapat diterima dari suatu nilai hasil pengukuran terhadap nilai sebenarnya atau nilai yang diharapkan.
+Artinya, suatu pengukuran masih dianggap layak atau bisa diterima, selama nilai kesalahannya masih berada dalam batas toleransi yang ditentukan.</p>
+  </section>
+  <section>
+    <h2>Tujuan Toleransi Kesalahan</h2>
+    <p>1.Menjamin hasil pengukuran masih dapat digunakan sesuai keperluannya.</p>
+<p>2.Menghindari produk hasil kerja yang tidak sesuai standar.</p>
+<p>3.Memberikan fleksibilitas dalam produksi pengukuran agar lebih efisien dan ekonomis.</p>
+  </section>
+  <section>
+    <h2>Rumus Umum</h2>
+    <p>Nilai yang diharapkan = 𝑥</p>
+<p>Toleransi kesalahan = ±𝑡</p>
+<p>Maka, nilai yang diterima berada pada rentang:
+x - t ≤ hasil pengukuran ≤ x + t</p>
+  </section>
+<section>
+    <h2>Contoh sederhana</h2>
+    <p>Jika panjang suatu batang logam harus 100 cm, dan toleransi kesalahan adalah ±0,5 cm, maka:</p>
+<p>-Panjang yang diterima adalah antara 99,5 cm hingga 100,5 cm.</p>
+<p>-Jika panjangnya 101 cm atau 99 cm, maka tidak memenuhi toleransi.</p>
+  </section>
+  <section>
+  <h2>Contoh Perhitungan</h2>
+    <p>JSebuah resistor dirancang dengan nilai 220 ohm dan toleransi ±5%.
+Berapa batas bawah dan batas atas nilai resistansi yang masih diterima?</p>
+<p>Jawab:</p>
+<p>5% dari 220 ohm = 0,05 × 220 = 11 ohm</p>
+<p>Batas bawah = 220 - 11 = 209 ohm</p>
+<p>Batas atas = 220 + 11 = 231 ohm</p>
+<p>Jadi, nilai resistansi yang masih diterima adalah antara 209 ohm hingga 231 ohm.</p>
+  </section>
+
+  <div class="back-button">
+    <a href="aproksimasi.html">← Kembali ke Menu Utama</a>
+  </div>
